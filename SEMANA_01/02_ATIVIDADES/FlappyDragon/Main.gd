@@ -1,9 +1,13 @@
 extends Node # instancia a classe Node2D
 
+#status é se o jogo está rodando ou não, ou seja, se o status estiver 1 ele está rodando e você pode jogar. Se o status estiver 0 o jogo finaliza e aparece a tela de try again, que deixa você começar o jogo denovo.
+#score é os pontos que o jogador tem. 
+# X é o quanto a tela meche horizontamlmente. Então se aumentar, a tela passa mais rápido, resultando no Dragão ir mais rápido e encontrar os obstaculos mais cedo. Se eu reduzo, ele se move mais lento e dá ao jogador mais tempo de reação.
+# Y é a velocidade que o dragão desce, poderia ser considerada como gravidade.
 var status = 1
 var vscore = 0
-var x = 1.5 
-var y = 1.5 
+var x = 6
+var y = 1.5
 
 # executa essa função ao carregar o jogo
 func _ready():
@@ -41,12 +45,11 @@ func _process(delta):
 			
 		# se apertou seta para baixo, aumenta o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_down"):
-			$dragon.position.y += 2
+			$dragon.position.y += 8
 
 		# se apertou seta para cima, diminui o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_up"):
-			$dragon.position.y -= 4
-			
+			$dragon.position.y -= 12			
 	elif status == 0: # parado
 		
 		$dragon/dragonImages.playing = false # faz dragão parar de bater as asas
