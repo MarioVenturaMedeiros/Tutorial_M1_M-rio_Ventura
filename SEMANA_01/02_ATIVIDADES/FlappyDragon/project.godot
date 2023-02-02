@@ -17,6 +17,7 @@ run/main_scene="res://Main.tscn"
 
 window/size/width=400
 window/size/resizable=false
+window/dpi/allow_hidpi=true
 
 [physics]
 
