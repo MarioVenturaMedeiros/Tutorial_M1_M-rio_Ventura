@@ -4,7 +4,7 @@ extends Node # instancia a classe Node2D
 #score é os pontos que o jogador tem. 
 # X é o quanto a tela meche horizontamlmente. Então se aumentar, a tela passa mais rápido, resultando no Dragão ir mais rápido e encontrar os obstaculos mais cedo. Se eu reduzo, ele se move mais lento e dá ao jogador mais tempo de reação.
 # Y é a velocidade que o dragão desce, poderia ser considerada como gravidade.
-var status = 1
+var status = 1	
 var vscore = 0
 var x = 6
 var y = 1.5
