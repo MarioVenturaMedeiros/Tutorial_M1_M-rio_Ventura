@@ -6,7 +6,7 @@ extends Node # instancia a classe Node2D
 # Y é a velocidade que o dragão desce, poderia ser considerada como gravidade.
 var status = 1	
 var vscore = 0
-var x = 6
+var x = 2
 var y = 1.5
 
 # executa essa função ao carregar o jogo
@@ -45,11 +45,11 @@ func _process(delta):
 			
 		# se apertou seta para baixo, aumenta o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_down"):
-			$dragon.position.y += 8
+			$dragon.position.y += 2
 
 		# se apertou seta para cima, diminui o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_up"):
-			$dragon.position.y -= 12			
+			$dragon.position.y -= 3			
 	elif status == 0: # parado
 		
 		$dragon/dragonImages.playing = false # faz dragão parar de bater as asas

@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://img/background.png" type="Texture" id=1]
 [ext_resource path="res://img/inteli.png" type="Texture" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
 [ext_resource path="res://img/column2.png" type="Texture" id=4]
 [ext_resource path="res://img/column1.png" type="Texture" id=5]
+[ext_resource path="res://src/weather.tscn" type="PackedScene" id=6]
 [ext_resource path="res://img/dragon1.png" type="Texture" id=7]
 [ext_resource path="res://img/dragon2.png" type="Texture" id=8]
 [ext_resource path="res://img/dragon3.png" type="Texture" id=9]
@@ -49,7 +50,6 @@ texture = ExtResource( 1 )
 position = Vector2( 81, 71 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dragon"]
@@ -98,6 +98,8 @@ valign = 1
 position = Vector2( 373.155, 25.3012 )
 scale = Vector2( 0.182862, 0.149879 )
 texture = ExtResource( 2 )
+
+[node name="Weather" parent="." instance=ExtResource( 6 )]
 
 [connection signal="body_shape_entered" from="columns" to="." method="_on_columns_body_shape_entered"]
 [connection signal="body_shape_exited" from="columns" to="." method="_on_columns_body_shape_exited"]
